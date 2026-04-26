@@ -1,0 +1,107 @@
+{
+  "entities": {
+    "Registration": {
+      "title": "Course Registration",
+      "description": "Information provided by students when enrolling in a course.",
+      "type": "object",
+      "properties": {
+        "fullName": { "type": "string" },
+        "phone": { "type": "string" },
+        "courseId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["fullName", "phone", "courseId", "createdAt"]
+    },
+    "BlogPost": {
+      "title": "Blog Post",
+      "description": "An article or news item on the educational platform.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "slug": { "type": "string" },
+        "content": { "type": "string" },
+        "excerpt": { "type": "string" },
+        "thumbnail": { "type": "string" },
+        "author": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "status": { "type": "string", "enum": ["draft", "published"] },
+        "publishedAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "slug", "content", "publishedAt"]
+    },
+    "PortfolioItem": {
+      "title": "Portfolio Item",
+      "description": "A showcase of student work.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "studentName": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "studentName", "category", "imageUrl"]
+    },
+    "Subscription": {
+      "title": "Newsletter Subscription",
+      "description": "User email for the newsletter.",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "format": "email" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["email", "createdAt"]
+    },
+    "SiteSettings": {
+      "title": "Site Settings",
+      "description": "Global configuration for the website's appearance and content.",
+      "type": "object",
+      "properties": {
+        "siteName": { "type": "string" },
+        "accentColor": { "type": "string" },
+        "contactPhone": { "type": "string" },
+        "contactEmail": { "type": "string" },
+        "address": { "type": "string" },
+        "facebookUrl": { "type": "string" },
+        "telegramUrl": { "type": "string" },
+        "instagramUrl": { "type": "string" }
+      }
+    },
+    "Admin": {
+      "title": "Administrator",
+      "description": "A user with administrative privileges.",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" }
+      },
+      "required": ["email"]
+    }
+  },
+  "firestore": {
+    "admins": {
+      "schema": "Admin",
+      "description": "List of administrators by UID."
+    },
+    "registrations": {
+      "schema": "Registration",
+      "description": "Student enrollment requests."
+    },
+    "posts": {
+      "schema": "BlogPost",
+      "description": "Blog articles."
+    },
+    "portfolio": {
+      "schema": "PortfolioItem",
+      "description": "Gallery of student achievements."
+    },
+    "subscriptions": {
+      "schema": "Subscription",
+      "description": "Newsletter subscribers."
+    },
+    "settings": {
+      "schema": "SiteSettings",
+      "description": "Global site configuration."
+    }
+  }
+}
