@@ -87,7 +87,7 @@ export default function Contact() {
             <div className="pt-8 border-t border-slate-800">
               <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4">Quick Chat</p>
               <div className="flex gap-4">
-                <a href="https://t.me/your_telegram" className="p-3 bg-slate-800 rounded-xl hover:bg-indigo-600 transition-all"><Send className="w-5 h-5" /></a>
+                <a href="https://t.me/BlessedBatyr" className="p-3 bg-slate-800 rounded-xl hover:bg-indigo-600 transition-all"><Send className="w-5 h-5" /></a>
                 <a href="#" className="p-3 bg-slate-800 rounded-xl hover:bg-indigo-600 transition-all"><Instagram className="w-5 h-5" /></a>
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function Contact() {
                     <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Email Address (Optional)</label>
                     <input 
                       {...register('email')}
-                      placeholder="azamat@example.uz" 
+                      placeholder="blessedbatir@gmail.com" 
                       className="w-full bg-slate-50 border border-slate-100 px-6 py-3 md:py-4 rounded-xl md:rounded-2xl outline-none focus:ring-2 focus:ring-indigo-500 transition-all font-medium text-sm"
                     />
                 </div>
